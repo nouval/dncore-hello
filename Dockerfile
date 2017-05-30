@@ -1,5 +1,5 @@
-FROM microsoft/dotnet:latest
-COPY . /app
+FROM microsoft/aspnetcore:latest
 WORKDIR /app
+COPY ./publish .
 EXPOSE 5000/tcp
-ENTRYPOINT ["dotnet", "run"]
+ENTRYPOINT ["dotnet", "dncore-hello.dll"]
